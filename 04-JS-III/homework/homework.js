@@ -88,8 +88,8 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var sum=0;
-  for(let i=0;i<resultadosTest.length;i++){
+  var sum = 0;
+  for(let i = 0;i < resultadosTest.length; i++){
     sum = sum + resultadosTest[i];
   }
   return sum/resultadosTest.length;
@@ -100,10 +100,10 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  let mayor=numeros[0];
-  for(let i=0; i<numeros.length;i++){
+  let mayor = numeros[0];
+  for(let i=1; i<numeros.length;i++){
     if(numeros[i]>=mayor){
-      mayor=numeros[i];
+      mayor = numeros[i];
     }
   }
   return mayor;
@@ -120,8 +120,8 @@ function multiplicarArgumentos() {
   }else if(arguments.length===1){
     return arguments[0];
   } else {
-    for(let i=0;i<arguments.length;i++){
-      producto=arguments[i]*producto;
+    for(let i=0; i<arguments.length; i++){
+      producto = arguments[i]*producto;
     }    
   } 
   return producto;
@@ -132,10 +132,8 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
   let contador=0;
-  for(let i=0;i<arreglo.length;i++){
-    if(arreglo[i]>18){
-      contador=contador+1;
-    }
+  for(let i=0; i<arreglo.length; i++){
+    if(arreglo[i]>18){ contador = contador+1; }
   }
   return contador;
 }
@@ -158,8 +156,8 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  let numerito=n.toString();
-  if(numerito[0]==="9"){
+  let cadena=n.toString();
+  if(cadena[0]==="9"){
     return true;
   }else { return false;}
   
@@ -170,7 +168,7 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for(let i=0; i<arreglo.length-1;i++){
+  for(let i=0; i<arreglo.length-1; i++){
     if(arreglo[i]===arreglo[i+1]){
       return true
     }
@@ -185,7 +183,7 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   let array2=[];
-  for(let i=0;i<array.length;i++){
+  for(let i=0; i<array.length; i++){
     if(array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre"){
       array2.push(array[i])
     }
@@ -200,7 +198,7 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   let array2=[];
-  for(let i=0; i<array.length;i++){
+  for(let i=0; i<array.length; i++){
     if(array[i]>100){
       array2.push(array[i]);
     }
